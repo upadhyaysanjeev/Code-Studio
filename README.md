@@ -1,186 +1,202 @@
-![logo](https://github.com/sahilatahar/Code-Sync/assets/100127570/d1ff7f52-a692-4d51-b281-358aeab9156e)
+# Code-Studio
 
-A collaborative, real-time code editor where users can seamlessly code together. It provides a platform for multiple users to enter a room, share a unique room ID, and collaborate on code simultaneously.
+A collaborative, real-time code editor where multiple users can join a room (via a unique room ID) and code together simultaneously. Code-Studio supports multi-file projects, live presence, chat, collaborative drawing, and in-editor code execution — everything you need for pair-programming, teaching, or group coding sessions.
 
-![GitHub contributors](https://img.shields.io/github/contributors/sahilatahar/Code-Sync?style=for-the-badge&color=48bf21)
-![GitHub Repo stars](https://img.shields.io/github/stars/sahilatahar/Code-Sync?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/sahilatahar/Code-Sync?style=for-the-badge&color=d7af2d)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/sahilatahar/Code-Sync?style=for-the-badge&color=f47373)
-![GitHub License](https://img.shields.io/github/license/sahilatahar/Code-Sync?style=for-the-badge&color=e67234)
-![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fsahilatahar%2FCode-Sync&label=Repo%20Views&countColor=%2337d67a&labelStyle=upper)
+---
 
 ## 🔮 Features
 
-- 💻 Real-time collaboration on code editing across multiple files
-- 📁 Create, open, edit, save, delete, and organize files and folders
-- 💾 Option to download the entire codebase as a zip file
-- 🚀 Unique room generation with room ID for collaboration
-- 🌍 Comprehensive language support for versatile programming
-- 🌈 Syntax highlighting for various file types with auto-language detection
-- 🚀 Code Execution: Users can execute the code directly within the collaboration environment
-- ⏱️ Instant updates and synchronization of code changes across all files and folders
-- 📣 Notifications for user join and leave events
-- 👥 User presence list with online/offline status indicators
-- 💬 Real-time group chatting functionality
-- 🎩 Real-time tooltip displaying users currently editing
-- 💡 Auto suggestion based on programming language
-- 🔠 Option to change font size and font family
-- 🎨 Multiple themes for personalized coding experience
-- 🎨 Collaborative Drawing: Enable users to draw and sketch collaboratively in real-time
-- 🤖 Copilot: An AI-powered assistant that generates code, allowing you to insert, copy, or replace content seamlessly within your files.
+* Real-time collaborative code editing across multiple files and folders
+* Create, open, edit, save, delete, and organize files and folders
+* Download the entire workspace as a ZIP file
+* Unique room generation with shareable room IDs for collaboration
+* Broad language support with syntax highlighting and auto-language detection
+* Execute code directly from the editor (integrates with code execution backends)
+* Instant synchronization of edits across all participants
+* Join/leave notifications and user presence list (online/offline)
+* Real-time group chat
+* Live tooltips showing who is editing which file/line
+* Auto-suggestions based on the current programming language
+* Customizable editor (font family, font size, themes)
+* Collaborative drawing/sketchboard for diagrams and UI brainstorming
+* AI Assistant (Copilot) to generate or modify code snippets within files
 
-## 🚀 Live Preview
+---
 
-You can view the live preview of the project [here](https://code-sync-live.vercel.app/).
+## Live Preview
 
-## 💻 Tech Stack
+If a demo is available, replace the placeholder below with your deployment URL.
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![ExpressJS](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
-![Socket io](https://img.shields.io/badge/Socket.io-ffffff?style=for-the-badge)
-![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+`https://your-live-preview.example.com`
+
+---
+
+## Tech Stack
+
+Typical stack used for projects like Code-Studio (adapt to your implementation):
+
+* Frontend: React + TypeScript, React Router, Tailwind CSS (or similar)
+* Backend: Node.js, Express
+* Real-time: Socket.IO (or WebRTC / similar)
+* Code Execution: Piston or any code-execution API / sandboxed runner
+* Deployment: Vercel / Netlify (frontend), any Node host / Docker (backend)
+* Containerization: Docker (optional)
+
+---
 
 ## ⚙️ Installation
 
-### Method 1: Manual Installation
+### Method 1 — Manual (local development)
 
-1. **Fork this repository:** Click the Fork button located in the top-right corner of this page.
-2. **Clone the repository:**
-   ```bash
-   git clone https://github.com/<your-username>/Code-Sync.git
-   ```
-3. **Create .env file:**
-   Inside the client and server directories create `.env` and set:
-
-   Frontend:
+1. **Fork or clone this repository**
 
    ```bash
-   VITE_BACKEND_URL=<your_server_url>
+   git clone https://github.com/<your-username>/Code-Studio.git
+   cd Code-Studio
    ```
 
-   Backend:
+2. **Create `.env` files**
 
-   ```bash
-   PORT=3000
-   ```
+   * In the `client` directory create `.env`:
 
-4. **Install dependencies:**
-   ```bash
-   npm install     # Run in both client and server directories
-   ```
-5. **Start the servers:**
-   Frontend:
-   ```bash
-   cd client
-   npm run dev
-   ```
-   Backend:
-   ```bash
-   cd server
-   npm run dev
-   ```
-6. **Access the application:**
-   ```bash
-   http://localhost:5173/
-   ```
-### 🎥 Need help with the setup?
-👉 Watch [this video](https://youtu.be/zVHwOmU0aqo) for a step-by-step guide.
-### Method 2: Docker Installation
-
-1. **Install Docker Desktop:**
-
-   - Download and install **Docker Desktop** from [Docker’s official website](https://www.docker.com/products/docker-desktop/).
-   - Verify installation:
      ```bash
-     docker --version
+     VITE_BACKEND_URL=http://localhost:3000
      ```
 
-2. **Pull Docker Images:**
+   * In the `server` directory create `.env`:
+
+     ```bash
+     PORT=3000
+     ```
+
+3. **Install dependencies**
 
    ```bash
-   # Pull Backend Image
-   docker pull sahilatahar/code-sync-server:latest
+   # From project root or in each service folder
+   cd client
+   npm install
 
-   # Pull Frontend Image
-   docker pull sahilatahar/code-sync-client:latest
+   cd ../server
+   npm install
    ```
 
-3. **Run Docker Containers:**
+4. **Start development servers**
 
    ```bash
-   # Run Backend Container (Port 3000)
-   docker run -d -p 3000:3000 --name code-sync-server sahilatahar/code-sync-server:latest
+   # Frontend
+   cd client
+   npm run dev
 
-   # Run Frontend Container (Port 5173)
-   docker run -d -p 5173:5173 --name code-sync-client sahilatahar/code-sync-client:latest
+   # Backend
+   cd ../server
+   npm run dev
    ```
 
-4. **Access the application:**
+5. **Open the app**
+
+   ```
+   http://localhost:5173
+   ```
+
+---
+
+### Method 2 — Docker (recommended for isolated runs)
+
+1. **Build images locally**
+
    ```bash
-   http://localhost:5173/
+   # From repository root
+   docker build -t code-studio-server ./server
+   docker build -t code-studio-client ./client
    ```
 
-## 🔮 Features for Next Release
+2. **Run containers**
 
-- **Admin Permission:** Implement an admin permission system to manage user access levels and control over certain platform features.
+   ```bash
+   docker run -d -p 3000:3000 --name code-studio-server code-studio-server
+   docker run -d -p 5173:5173 --name code-studio-client code-studio-client
+   ```
 
-## 🤝 Contribute
+3. **Or use docker-compose**
 
-We welcome contributions to make Code Sync even better! Follow the [contribution guidelines](CONTRIBUTING.md) to get started.
+   Create a `docker-compose.yml` in the project root:
 
-## 🌟 Support Us
+   ```yaml
+   version: '3.8'
+   services:
+     server:
+       build: ./server
+       ports:
+         - "3000:3000"
+       environment:
+         - PORT=3000
 
-If you find this helpful or valuable, please consider 🌟 starring the repository. It helps us gain visibility and encourages further development.
+     client:
+       build: ./client
+       ports:
+         - "5173:5173"
+       environment:
+         - VITE_BACKEND_URL=http://server:3000
+       depends_on:
+         - server
+   ```
 
-## 🧾 License
+   Then run:
 
-This project is licensed under the [MIT License](LICENSE).
+   ```bash
+   docker compose up --build
+   ```
 
-## 🌟 Appreciation for Resources
+---
 
-Special thanks to:
+## 🛠️ Configuration & Notes
 
-- EMKC for providing the Piston API:
+* Ensure the code execution backend (Piston or similar) is reachable and sandboxed for security. Never run untrusted code on an exposed host without strict sandboxing.
+* If using a third-party code-execution API, store API keys in the server `.env` and never commit secrets to the repo.
+* For production deployments, enable HTTPS, configure CORS properly, and consider horizontal scaling for socket servers (use a shared pub/sub such as Redis for socket clustering).
 
-  - [Piston Repository](https://github.com/engineer-man/piston)
-  - [Piston Docs](https://piston.readthedocs.io/en/latest/api-v2/)
+---
 
-- Tldraw contributors:
-  - [Tldraw Repository](https://github.com/tldraw/tldraw)
-  - [Tldraw Documentation](https://tldraw.dev/)
+## 🔮 Planned / Next-release Features
 
-- Pollinations AI:
-  - [Pollinations Repository](https://github.com/pollinations/pollinations)
-  - [Pollinations Docs](https://pollinations.ai/)
+* Admin roles and permission system (room owners, moderators)
+* Persistent projects (save workspaces to user accounts)
+* File history and versioning / undo across sessions
+* Voice/video calling support for pair-programming
+* Better RBAC and organization features for teams
 
-## ✍️ About Developer
+---
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top">
-        <img src="https://github.com/sahilatahar.png" width="120px;" alt="Sahil Atahar"/>
-        <br />
-        <b>Sahil Atahar</b>
-      </td>
-    </tr>
-    <tr>
-        <td align="center">
-            <a href="https://github.com/sahilatahar">
-            <img src="https://img.shields.io/badge/GitHub-100000.svg?style=for-the-badge&logo=github&logoColor=white"/>
-            </a>
-            <br/>
-            <a href="https://linkedin.com/in/sahilatahar">
-            <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/>
-            </a>
-        </td>
-    </tr>
-  </tbody>
-</table>
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these general steps:
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feat/your-feature`
+3. Make your changes and add tests where appropriate
+4. Commit and push: `git push origin feat/your-feature`
+5. Open a pull request describing the change
+
+Refer to `CONTRIBUTING.md` (if present) for repository-specific guidelines.
+
+---
+
+## 📦 License
+
+This project is released under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## 🙏 Acknowledgements
+
+Thanks to the open-source projects and libraries that make implementations like Code-Studio possible, including code execution backends, realtime libraries, and collaborative drawing tools.
+
+---
+
+If you want, I can also:
+
+* produce a `docker-compose.yml` tuned to your repo layout,
+* generate `env.example` files for client & server, or
+* provide a short CONTRIBUTING.md template.
+
+Which one should I create first?
